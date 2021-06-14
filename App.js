@@ -20,11 +20,11 @@ export default function App() {
 
             //Set the icon based on which route it is (name of the tab)
             if (route.name === "Countdown") {
-              iconName = "home";
+              iconName = "clock-o";
             } else if (route.name === "Share") {
-              iconName = "list";
+              iconName = focused ? "folder-open": "folder";
             } else if (route.name === "Updates") {
-              iconName = focused ? "user" : "user-o";
+              iconName = "bullhorn";
             }
 
             // You can return any component that you like here!
