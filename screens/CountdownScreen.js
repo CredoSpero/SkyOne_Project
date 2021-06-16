@@ -12,7 +12,7 @@ function CountdownScreen({ navigation }) {
         backgroundColor: "lightblue",
       }}
     >
-      <Text> Countdown! </Text>
+      <Text> Countdown timer! </Text>
       <Button
         title="You've won $1MM!!!! CLICK HERE!!!"
         onPress={() => navigation.navigate("Note")}
