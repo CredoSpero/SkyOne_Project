@@ -4,9 +4,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 
+
 import ShareScreen from './screens/ShareScreen';
-import UpdatesScreen from './screens/UpdatesScreen';
 import CountdownScreen from './screens/CountdownScreen';
+import RockPaperScissors from './screens/RockPaperScissors';
+import Pomodoro from './screens/pomodoro';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,10 +23,13 @@ export default function App() {
             //Set the icon based on which route it is (name of the tab)
             if (route.name === "Countdown") {
               iconName = "clock-o";
-            } else if (route.name === "Share") {
-              iconName = focused ? "folder-open": "folder";
-            } else if (route.name === "Updates") {
-              iconName = "bullhorn";
+            } else if (route.name === "Messages") {
+              iconName = "envelope";
+              // <Ionicons name="heart-circle" size={24} color="black" />
+            } else if (route.name === "Mini-Games") {
+              iconName = "gamepad";
+            } else if (route.name == "Timer") {
+              iconName = "book";
             }
 
             // You can return any component that you like here!
@@ -37,8 +42,9 @@ export default function App() {
         }}
       >
         <Tab.Screen name="Countdown" component={CountdownScreen} />
-        <Tab.Screen name="Share" component={ShareScreen} />
-        <Tab.Screen name="Updates" component={UpdatesScreen} />
+        <Tab.Screen name="Timer" component={Pomodoro} />
+        <Tab.Screen name="Messages" component={ShareScreen} />
+        <Tab.Screen name="Mini-Games" component={RockPaperScissors} />
       </Tab.Navigator>
     </NavigationContainer>
   );
