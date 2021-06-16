@@ -8,6 +8,7 @@ const image = { uri: "https://images.unsplash.com/photo-1524678714210-9917a6c619
 
 function CountdownScreen({ navigation }) {
   return (
+
     <View style= {styles.container}>
       <ImageBackground source={image} style={styles.imagebg}> 
 
